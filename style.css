@@ -643,6 +643,405 @@ body{
 
 
 
+.hero-image img{
+    width:500px;
+    animation:floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
 
 
 
+
+.logo{
+    background:linear-gradient(
+        90deg,
+        #3b82f6,
+        #60a5fa,
+        #2563eb
+    );
+    background-size:200%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position:0%;
+    }
+    100%{
+        background-position:200%;
+    }
+}
+
+.service-card,
+.project-card,
+.tech-card{
+    transition:.4s;
+}
+
+.service-card:hover,
+.project-card:hover,
+.tech-card:hover{
+    transform:
+    perspective(1000px)
+    rotateX(8deg)
+    rotateY(8deg)
+    translateY(-10px);
+}
+
+
+.btn-primary{
+    animation:pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow{
+    0%{
+        box-shadow:0 0 10px #3b82f6;
+    }
+
+    50%{
+        box-shadow:
+        0 0 30px #3b82f6,
+        0 0 60px #3b82f6;
+    }
+
+    100%{
+        box-shadow:0 0 10px #3b82f6;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+PREMIUM PORTFOLIO EFFECTS
+========================= */
+
+/* Animated Background Grid */
+
+body{
+background:#020617;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle,#3b82f622 1px,transparent 1px);
+background-size:40px 40px;
+animation:moveBg 20s linear infinite;
+z-index:-2;
+}
+
+@keyframes moveBg{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-200px);
+}
+}
+
+/* Hero Glow */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:500px;
+height:500px;
+background:#3b82f6;
+filter:blur(200px);
+opacity:.15;
+top:-150px;
+left:-150px;
+}
+
+/* Floating Hero Image */
+
+.hero-image img{
+width:500px;
+animation:floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-25px);
+}
+100%{
+transform:translateY(0);
+}
+}
+
+/* Animated Logo */
+
+.logo{
+background:linear-gradient(
+90deg,
+#3b82f6,
+#60a5fa,
+#2563eb
+);
+background-size:200%;
+-webkit-background-clip:text;
+color:transparent;
+animation:gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove{
+0%{
+background-position:0%;
+}
+100%{
+background-position:200%;
+}
+}
+
+/* Glassmorphism Cards */
+
+.service-card,
+.project-card,
+.tech-card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+overflow:hidden;
+position:relative;
+transition:.5s;
+}
+
+.service-card::before,
+.project-card::before,
+.tech-card::before{
+content:'';
+position:absolute;
+top:-100%;
+left:-100%;
+width:200%;
+height:200%;
+background:
+linear-gradient(
+45deg,
+transparent,
+rgba(255,255,255,.08),
+transparent
+);
+transition:.8s;
+}
+
+.service-card:hover::before,
+.project-card:hover::before,
+.tech-card:hover::before{
+top:100%;
+left:100%;
+}
+
+.service-card:hover,
+.project-card:hover,
+.tech-card:hover{
+transform:
+perspective(1000px)
+rotateX(8deg)
+rotateY(8deg)
+translateY(-10px);
+
+```
+box-shadow:
+0 0 30px rgba(59,130,246,.25);
+```
+
+}
+
+/* Project Image Zoom */
+
+.project-card{
+overflow:hidden;
+}
+
+.project-card img{
+transition:.6s;
+}
+
+.project-card:hover img{
+transform:scale(1.15);
+}
+
+/* Premium Buttons */
+
+.btn-primary{
+position:relative;
+overflow:hidden;
+animation:pulseGlow 2s infinite;
+}
+
+.btn-primary::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.4),
+transparent
+);
+transition:.7s;
+}
+
+.btn-primary:hover::before{
+left:100%;
+}
+
+@keyframes pulseGlow{
+0%{
+box-shadow:0 0 10px #3b82f6;
+}
+
+```
+50%{
+    box-shadow:
+    0 0 30px #3b82f6,
+    0 0 60px #3b82f6;
+}
+
+100%{
+    box-shadow:0 0 10px #3b82f6;
+}
+```
+
+}
+
+/* Social Icons */
+
+.social-icons a,
+.footer-icons a{
+transition:.4s;
+}
+
+.social-icons a:hover,
+.footer-icons a:hover{
+transform:translateY(-6px) scale(1.1);
+box-shadow:0 0 20px #3b82f6;
+}
+
+/* Skill Bars */
+
+.bar{
+overflow:hidden;
+}
+
+.bar div{
+animation:loadSkill 2s ease forwards;
+}
+
+@keyframes loadSkill{
+from{
+width:0;
+}
+}
+
+/* Navbar Hover */
+
+.navbar a{
+position:relative;
+}
+
+.navbar a::after{
+content:'';
+position:absolute;
+width:0;
+height:2px;
+left:0;
+bottom:-5px;
+background:#3b82f6;
+transition:.4s;
+}
+
+.navbar a:hover::after{
+width:100%;
+}
+
+/* Section Reveal */
+
+.hidden{
+opacity:0;
+transform:translateY(60px);
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+transition:1s;
+}
+
+/* Animated Blur Circles */
+
+.blur-circle{
+position:fixed;
+border-radius:50%;
+filter:blur(120px);
+z-index:-1;
+animation:float 10s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0px);
+}
+
+```
+50%{
+    transform:translateY(-40px);
+}
+
+100%{
+    transform:translateY(0px);
+}
+```
+
+}
