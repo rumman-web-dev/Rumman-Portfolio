@@ -1045,3 +1045,159 @@ transform:translateY(0px);
 ```
 
 }
+
+
+
+/* light effect theme change */
+#theme-toggle{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#3b82f6;
+    color:white;
+    cursor:pointer;
+    font-size:20px;
+}
+
+#theme-toggle:hover{
+    transform:rotate(180deg);
+    box-shadow:0 0 20px #3b82f6;
+}
+
+
+.light-mode{
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#475569;
+    --border:#cbd5e1;
+}
+
+.light-mode body{
+    background:#f8fafc;
+}
+
+.light-mode .header{
+    background:rgba(255,255,255,.8);
+}
+
+.light-mode .navbar a,
+.light-mode .logo{
+    color:#0f172a;
+}
+
+.light-mode .contact-form input,
+.light-mode .contact-form textarea{
+    color:#0f172a;
+}
+
+
+body.light-mode{
+    background:#f8fafc !important;
+    color:#0f172a !important;
+}
+
+body.light-mode .header{
+    background:white !important;
+}
+
+body.light-mode .service-card,
+body.light-mode .project-card,
+body.light-mode .tech-card,
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea{
+    background:#ffffff !important;
+    color:#0f172a !important;
+    border:1px solid #ddd;
+}
+
+body.light-mode .navbar a,
+body.light-mode .logo,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3{
+    color:#0f172a !important;
+}
+
+
+
+
+
+
+.logo{
+    color:white;
+}
+
+.navbar a{
+    color:white;
+}
+
+.social-icons a{
+    color:white;
+}
+
+.footer-icons a{
+    color:white;
+}
+
+
+
+/* LIGHT MODE FIXES */
+
+body.light-mode{
+    background:#f8fafc !important;
+    color:#0f172a !important;
+}
+
+body.light-mode .header{
+    background:rgba(255,255,255,.95) !important;
+}
+
+body.light-mode .navbar a,
+body.light-mode .hero-content p,
+body.light-mode .about-content p,
+body.light-mode .contact-left p,
+body.light-mode .project-card p,
+body.light-mode .service-card p,
+body.light-mode .footer-content p,
+body.light-mode .copyright{
+    color:#475569 !important;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode .logo{
+    color:#0f172a !important;
+}
+
+body.light-mode .service-card,
+body.light-mode .project-card,
+body.light-mode .tech-card,
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea{
+    background:white !important;
+    color:#0f172a !important;
+    border:1px solid #dbeafe !important;
+}
+
+body.light-mode .social-icons a,
+body.light-mode .footer-icons a{
+    background:#e2e8f0 !important;
+    color:#0f172a !important;
+}
+
+body.light-mode .availability{
+    background:#e2e8f0 !important;
+    color:#0f172a !important;
+}
+
+body.light-mode .footer{
+    background:#e2e8f0 !important;
+}
+
+body.light-mode .btn-secondary{
+    color: black;
+}
